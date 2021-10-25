@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Responsive Fullscreen Animated Sticky </title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <header>
+      <img src="PyPro.jpg" class="banner">
+      <a href="#" class="logo">HackClub</a>
+      <div class="toggle"></div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Join us</a> </li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+      window.addEventListener("scroll",function(){
+        const header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+      });
+      const navigation = document.querySelector('nav');
+      document.querySelector('.toggle').onclick = function(){
+        this.classList.toggle('active');
+        navigation.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>
