@@ -1,17 +1,14 @@
-*
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body
-{
+body {
   min-height: 1000px;
 }
-header
-{
+header {
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -22,143 +19,124 @@ header
   align-items: center;
   transition: 0.5s;
 }
-header.sticky
-{
+header.sticky {
   height: 40px;
 }
-header.sticky .logo
-{
+header.sticky .logo {
   position: absolute;
   font-size: 2em;
   left: 100px;
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
 }
-header .banner
-{
+header .banner {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: 0.5s
+  transition: 0.5s;
 }
-header.sticky .banner
-{
-  opacity:0;
+header.sticky .banner {
+  opacity: 0;
 }
-header .logo
-{
+header .logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   font-size: 15vw;
   color: #ff275f;
   font-weight: 700;
   transition: 0.5s;
   text-decoration: none;
   z-index: 1;
-
 }
-nav
-{
+nav {
   position: relative;
   display: flex;
   z-index: 1;
 }
-nav ul
-{
+nav ul {
   position: relative;
   display: flex;
   transition: 0.2s;
   transform: translateX(100px);
   opacity: 0;
 }
-header.sticky nav ul
-{
+header.sticky nav ul {
   transform: translateX(0);
   opacity: 1;
   transition-delay: 0.35s;
 }
-nav ul li
-{
+nav ul li {
   list-style: none;
 }
-nav ul li a
-{
+nav ul li a {
   color: white;
   display: inline-block;
   padding: 10px 15px;
   font-size: 5.2mm;
   text-decoration: none;
 }
-nav ul li a:hover
-{
+nav ul li a:hover {
   color: #ff275f;
 }
 
 /* Responsive */
-@media (max-width: 991px)
-{
+@media (max-width: 991px) {
   section,
-  header
-  {
+  header {
     padding: 40px;
   }
-  section h2
-  {
+  section h2 {
     font-size: 2em;
   }
-  header.sticky .logo
-  {
+  header.sticky .logo {
     left: 40px;
   }
-  header.sticky .banner
-  {
+  header.sticky .banner {
     opacity: 0;
   }
-  nav ul
-  {
-    display: name;
+  nav ul {
+    display: none;
     opacity: 0;
     visibility: hidden;
   }
-  nav.active ul
-  {
+  nav.active ul {
     position: fixed;
     top: 80px;
     left: 0;
-    width: 100%
-    height: calc(100%-80px);
+    width: 100%;
+    height: calc(100% - 80px);
     background: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    opacity: 0;
-    visibility: visible;
-
   }
-  header.sticky .toggle
-  {
+  header.sticky nav ul {
+    opacity: 1;
+    visibility: visible;
+  }
+  header.sticky .toggle {
     position: fixed;
-    top:15px;
+    top: 15px;
     right: 40px;
     width: 50px;
     height: 50px;
     cursor: pointer;
-    background: #fff url("https://img.icons8.com/material-rounded/24/000000/menu--v3.png");
+    background: #fff
+      url('https://img.icons8.com/material-rounded/24/000000/menu--v3.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
   }
-  header.sticky .toggle.active
-  {
-    background: #fff url("https://img.icons8.com/material-rounded/24/000000/menu--v3.png");
+  header.sticky .toggle.active {
+    background: #fff
+      url('https://img.icons8.com/material-rounded/24/000000/menu--v3.png');
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
-
   }
 }
